@@ -6,7 +6,7 @@
 #    By: chrattan <chrattan@42bangkok.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 21:39:33 by chrattan          #+#    #+#              #
-#    Updated: 2022/10/17 22:45:00 by chrattan         ###   ########.fr        #
+#    Updated: 2022/10/24 05:38:50 by chrattan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,9 @@ SRCS	= ft_isalpha.c \
 	  ft_bzero.c \
 	  ft_memcpy.c \
 	  ft_memset.c \
-	  ft_memmove.c
+	  ft_memmove.c \
+	  ft_memchr.c \
+	  ft_strlen.c
 LIBC	= ar -rcs
 CC	= gcc -Wall -Werror -Wextra -std=c99
 RM	= rm -rf
