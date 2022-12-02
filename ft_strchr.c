@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chrattan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/20 21:56:55 by chrattan          #+#    #+#             */
-/*   Updated: 2022/09/20 22:13:16 by chrattan         ###   ########.fr       */
+/*   Created: 2022/11/13 15:55:59 by chrattan          #+#    #+#             */
+/*   Updated: 2022/11/13 16:39:11 by chrattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	ft_memset (s, 0, n);
+	int	a;
+
+	a = 0;
+	c %= 256;
+	while (s[a])
+	{
+		if (s[a] == c)
+			return ((char *)s + a);
+		a++;
+	}
+	if (s[a] == c)
+		return ((char *)s + a);
+	return (0);
 }
