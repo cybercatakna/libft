@@ -5,29 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: chrattan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/14 20:46:34 by chrattan          #+#    #+#             */
-/*   Updated: 2023/01/14 20:46:34 by chrattan         ###   ########.fr       */
+/*   Created: 2023/01/27 14:50:56 by chrattan          #+#    #+#             */
+/*   Updated: 2023/01/27 14:51:02 by chrattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
-
 {
-	unsigned char	*a1;
-	unsigned char	*a2;
+	unsigned int	i;
 
-	a1 = (unsigned char *)s1;
-	a2 = (unsigned char *)s2;
-	while (n && *a1 && *a1 == *a2)
-	{
-		++a1;
-		++a2;
-		--n;
-	}
-	if (n)
-		return (*s1 - *s2);
+	i = 0;
+	if (n == 0)
+		return (0);
+	while (s1[i] && s2[i] && (s1[i] == s2[i]) && i < n)
+		i++;
+	if (i < n)
+		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 	else
 		return (0);
 }

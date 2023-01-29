@@ -6,7 +6,7 @@
 /*   By: chrattan <chrattan@42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 21:43:26 by chrattan          #+#    #+#             */
-/*   Updated: 2022/11/14 06:06:55 by chrattan         ###   ########.fr       */
+/*   Updated: 2023/01/25 13:20:21 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-char	*ft_strnsrt(const char *haystack, const char *needle, size_t n);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 char	*ft_strrchr(const char *s, int c);
 
 #endif
